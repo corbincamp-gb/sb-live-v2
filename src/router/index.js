@@ -1,25 +1,25 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+/* eslint-disable */
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../pages/HomeView.vue";
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+let routes = [{
+  path: "/",
+  name: "home",
+  component: HomeView
+}];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
-})
+});
+const pages = `Contacts,DiversityNotice,CommandersEducationOffice,Faq,IndustryEmployers,Locations,MilitaryMembers,Organizations,ProgramOverview,Sitemap`;
 
-export default router
+pages.split(",").forEach((p) =>
+  router.addRoute({ 
+    path: `/${p.toLowerCase()}`,
+    name: `${p.toLowerCase()}`,
+    component: () => import(`../pages/${p}View.vue`)
+  })
+);
+
+export default router;
