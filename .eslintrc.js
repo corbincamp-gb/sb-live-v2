@@ -11,6 +11,7 @@ module.exports = {
     parser: '@babel/eslint-parser'
   },
   rules: {
+    'vue/require-v-for-key': 'warn',
     "no-return-assign": ["off", "always"],
     "eol-last": ["error", "never"],
     "space-before-function-paren": 0,

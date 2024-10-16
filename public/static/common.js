@@ -1,3 +1,10 @@
+function toggleIcon(el){
+    el.querySelector(".expandIcon").classList.remove("fa-minus", "fa-plus");     
+    let cName = `fa-${el.classList.contains("collapsed") ? "minus" : "plus"}`;
+    el.querySelector(".expandIcon").classList.add(cName);
+    
+}
+
 // $(document).ready(function() { 
 // 	LoadAjaxSections();
 

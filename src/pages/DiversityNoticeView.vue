@@ -56,3 +56,10 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+  created () {
+      document.title = `${process.env.VUE_APP_TITLE_PREFIX} - Diveristy Notice`;
+  }
+};
+</script>

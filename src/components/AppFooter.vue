@@ -59,7 +59,7 @@
                                     <span class="footer-section-label">Members and Partners</span>
                                     <ul>
                                         <li>
-                                            <router-link :to=" { name: 'industryemployers'}" title="Industry Partners">Industry Partners</router-link>
+                                            <router-link :to=" { name: 'industrypartners'}" title="Industry Partners">Industry Partners</router-link>
                                         </li>
                                         <li>
                                             <router-link :to=" { name: 'militarymembers'}" title="Military Members">Military Members</router-link>
@@ -92,9 +92,8 @@
                     <div class="col-lg-7 order-lg-1 order-2">
                         <div id="copyright">
                             &copy; 2023 Official Department of Defense website.<br />
-                            <a href="privacy-and-security.htm" title="Legal & Administrative">Legal &amp;
-                                Administrative</a>
-                        </div>
+                            <router-link :to=" { name: 'privacyandsecurity'}" title="Legal & Administrative">Legal &amp; Administrative</router-link>
+                         </div>
                     </div>
                     <div class="col-lg-5 order-lg-2 order-1">
                         <div id="footer-logo-container">
